@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int test_function(int y) {
+// using pointer int func here with asterisk
+int test_function(int& y) {
 
     cout << "Address of y is: " << &y << endl; 
     return y * 2;
@@ -10,7 +11,8 @@ int test_function(int y) {
 
 int main() {
 
-    cout << test_function(2);
+    int x = 2;
+    cout << test_function(x);
     return 0;
 
 }
